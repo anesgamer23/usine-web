@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SADMI : Société Algérienne de Développement et Maintenance Industrielle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin: 0 1rem;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: url('hi.jpg') no-repeat center center/cover;
+            background-image: url(hl.jpg);
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            color: #ccc;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            color: #ccc;
+        }
+        .hero a {
+            background-color: #fab90a;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .hero a:hover {
+            background-color: #d89a06;
+        }
+        .services, .about, .projects, .partners, .contact {
+            padding: 3rem 2rem;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            background: #eaeaea;
+            border-radius: 10px;
+        }
+        .service {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .service:hover {
+            transform: scale(1);
+        }
+        .service h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .service p {
+            font-size: 1rem;
+            color: #666;
+        }
+        .about, .projects, .partners {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .about h2, .projects h2, .partners h2, .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .about p, .projects p, .partners p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+        .projects ul, .partners ul {
+            list-style: none;
+            padding: 0;
+        }
+        .projects ul li, .partners ul li {
+            padding: 0.5rem 0;
+            font-size: 1rem;
+            color: #333;
+        }
+        .contact {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact form input, .contact form textarea, .contact form button {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact form button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact form button:hover {
+            background-color: #003060;
+        }
+        .footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SADMI</div>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#partners">Partenaires</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+     
+    <section class="hero" >
+        <h1>Bienvenue chez SADMI</h1>
+        <p>Société Algérienne de Développement et Maintenance Industrielle.</p>
+        <a href="#services">Découvrez nos services</a>
+    </section>
+
+    <section id="services" class="services">
+        <div class="service">
+            <h3>Automatisation industrielle</h3>
+            <p>Programmation, conception et mise en œuvre de systèmes automatisés pour vos installations.</p>
+        </div>
+        <div class="service">
+            <h3>Électricité industrielle</h3>
+            <p>Installation et maintenance de systèmes électriques industriels.</p>
+        </div>
+        <div class="service">
+            <h3>Montage d'équipements</h3>
+            <p>Montage et mise en service de lignes de production clé en main.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>À propos de nous</h2>
+        <p>SADMI s'engage à fournir des solutions fiables et innovantes pour les industries algériennes. Avec une expertise éprouvée, nous intervenons dans divers secteurs, en offrant des services de développement, maintenance et intégration industrielle.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projets réalisés</h2>
+        <ul>
+            <li>Installation de systèmes automatisés pour des usines agroalimentaires.</li>
+            <li>Montage de lignes de production pour l'industrie des pattes.</li>
+            <li>Installation de systèmes automatisés pour des usine de boissons</li>
+        </ul>
+    </section>
+
+    <section id="partners" class="partners">
+        <h2>Nos partenaires</h2>
+        <ul>
+            <li>Partenaire A - Fournisseur de solutions électriques.</li>
+            <li>Partenaire B - Intégrateur de systèmes automatisés.</li>
+            <li>Partenaire C - Expert en maintenance industrielle.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        &copy; 2025 SADMI. Tous droits réservés.
+    </footer>
+
+    <script>
+        // GSAP Animations
+        gsap.fromTo(".hero h1", {opacity: 0, y: 30}, {opacity: 1, y: 0, duration: 1, delay: 0.5});
+        gsap.fromTo(".hero p", {opacity: 0, y: 30}, {opacity: 1, y: 0, duration: 1, delay: 1});
+        gsap.fromTo(".hero a", {opacity: 0, y: 30}, {opacity: 1, y: 0, duration: 1, delay: 1.5});
+
+        gsap.utils.toArray(".about, .projects, .partners").forEach((section, i) => {
+            gsap.fromTo(section, {opacity: 0, y: 30}, {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 0.2 + i * 0.3,
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
